@@ -1,3 +1,57 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --backgroud-color: rgb(27, 26, 26);
+}
+/* * {
+  cursor: none;
+} */
+
+body {
+  height: 100vh;
+  background-color: var(--backgroud-color);
+}
+
+.font-name {
+  font-family: "Times New Roman", Times, serif;
+}
+
+div.type-effect {
+  font-size: 90px;
+  color: white;
+}
+
+.cursor {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ffffff;
+  border-radius: 100%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.c--hidden {
+  opacity: 0;
+}
+
+.c--click {
+  transform: translate(-50%, -50%) scale(0.5);
+  background-color: #ff0000;
+}
+.cursor {
+  /* transition: all 100ms ease; */
+  transition-property: opacity, background-color, transform;
+}
+
+.c--hover {
+  position: absolute;
+  transform: translate(-50%, -50%) scale(1.25);
+  /* background-color: rgb(21, 255, 0); */
+}
+
+.vl {
+  border-left: 2px solid rgb(255, 255, 255);
+  height: 100px;
+}
