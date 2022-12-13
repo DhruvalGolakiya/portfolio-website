@@ -7,10 +7,9 @@ import Header from "../components/header";
 
 export default function Home() {
   return (
-    <div className="  text-[white] font-name  ">
-      {/* <CustomCursor /> */}
+    <div className="  text-[white] ">
       <Header />
-      <ContentBody />
+      <ContentBody /> {/* <CustomCursor /> */}
     </div>
   );
 }

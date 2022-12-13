@@ -11,7 +11,7 @@ import {
 export default function ContentBody() {
   return (
     <>
-      <div className="flex justify-between mt-[100px] mr-[50px]">
+      <div className="flex justify-between mt-[100px] mr-[50px] font-name">
         <div className="relative left-[300px] type-effect">
           <Typewriter
             options={{
@@ -23,7 +23,7 @@ export default function ContentBody() {
             onInit={(typewriter) => {
               typewriter
                 .typeString(
-                  "<a>Hello, World. <br /> I'm Dhruval Golakiya <br /> Full Stack Developer <br /> Freelancer</a>"
+                  "<a>Hello, World. <br />  I'm <span style='color:#85C1E9'> Dhruval Golakiya. </span> <br /> Full Stack Developer. <br /> Freelancer.</a>"
                 )
                 .pauseFor(200)
                 .start();
@@ -31,13 +31,14 @@ export default function ContentBody() {
           />
         </div>
         <div>
-          <div className="mt-[100px] ">
+          <div className="absolute bottom-20 mt-[100px] ">
             <ul className="flex-col grid gap-[40px]">
+              <a className="vl relative left-[8px] top-5"></a>
               <a href="#" className="">
                 <FaInstagram className="h-auto w-[20px] hover:w-[30px] absolute hover:text-[red] " />
               </a>
 
-              <a href="#">
+              <a href="#about">
                 <FaFacebook className="h-auto w-[20px] hover:w-[30px] absolute hover:text-[#3b5998]" />
               </a>
               <a href="#">
@@ -46,7 +47,6 @@ export default function ContentBody() {
               <a href="#">
                 <FaLinkedinIn className="h-auto w-[20px] hover:w-[30px] absolute hover:text-[#0A66C2] " />
               </a>
-              <a className="vl relative left-[10px]"></a>
             </ul>
           </div>
         </div>
