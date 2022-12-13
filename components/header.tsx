@@ -1,9 +1,14 @@
 import React from "react";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { AppProps } from "next/app";
+import useLocation from "react";
 
 export default function Header() {
   const router = useRouter();
+  const path = router.pathname;
+
   return (
     <>
       <div className="flex  justify-between ml-[100px]  items-center mr-[150px] font-header  h-[100px]">
@@ -17,22 +22,25 @@ export default function Header() {
         <div>
           <div className="mr-[350px] flex text-logo_color">
             <ul className="flex gap-[30px]  justify-center">
-              <motion.a href="/">
+              <Link href="/">
                 <li className="hover:text-[30px]">Home</li>
-              </motion.a>
-              <a href="/about">
+              </Link>
+              <Link
+                href="/about"
+                className={path == "/about" ? "text-[red]" : ""}
+              >
                 <li className="hover:text-[30px]">About</li>
-              </a>
-              <a>
+              </Link>
+              <Link href={"/work"}>
                 <li className="hover:text-[30px]">Work</li>
-              </a>
-              <a>
+              </Link>
+              <Link href={"/expertise"}>
                 <li className="hover:text-[30px]">Expertise</li>
-              </a>
+              </Link>
             </ul>
           </div>
         </div>
-        <div className="">
+        <div className="text-[white]">
           <div>
             <ul>
               <a>

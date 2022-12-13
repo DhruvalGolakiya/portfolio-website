@@ -1,5 +1,6 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
+import { motion as m } from "framer-motion";
 
 import {
   FaLinkedinIn,
@@ -11,8 +12,14 @@ import {
 export default function ContentBody() {
   return (
     <>
-      <div className="flex justify-between mt-[100px] mr-[50px] font-name">
-        <div className="relative left-[300px] type-effect">
+      <m.div
+        animate={{ x: "0%", opacity: 1 }}
+        initial={{ x: "100%", opacity: 0 }}
+        transition={{ ease: "easeOut" }}
+        exit={{ opacity: 1 }}
+        className="flex justify-between  mt-[100px] mr-[50px] font-name"
+      >
+        <div className="relative left-[300px] type-effect leading-[90px]">
           <Typewriter
             options={{
               loop: true,
@@ -31,7 +38,7 @@ export default function ContentBody() {
           />
         </div>
         <div>
-          <div className="absolute bottom-20 mt-[100px] ">
+          {/* <div className="absolute bottom-20 mt-[100px]  ">
             <ul className="flex-col grid gap-[40px]">
               <a className="vl relative left-[8px] top-5"></a>
               <a href="#" className="">
@@ -48,9 +55,9 @@ export default function ContentBody() {
                 <FaLinkedinIn className="h-auto w-[20px] hover:w-[30px] absolute hover:text-[#0A66C2] " />
               </a>
             </ul>
-          </div>
+          </div> */}
         </div>
-      </div>
+      </m.div>
     </>
   );
 }
