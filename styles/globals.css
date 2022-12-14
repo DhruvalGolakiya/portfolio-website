@@ -8,9 +8,12 @@
 /* * {
   cursor: none;
 } */
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  overflow-x: hidden;
+  width: 200vw;
   padding: 0;
   margin: 0;
   height: 100vh;

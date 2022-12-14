@@ -8,8 +8,13 @@ import AboutPage from "./about";
 
 export default function Home() {
   return (
-    <div className="">
-      <ContentBody />
+    <div className="w-[200vw] flex">
+      <div className="w-[100vw] ">
+        <ContentBody />
+      </div>
+      <div className="w-[100vw] ">
+        <AboutPage />
+      </div>
     </div>
   );
 }

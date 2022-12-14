@@ -14,27 +14,39 @@ export default function Header() {
       <div className="flex  justify-between ml-[100px]  items-center mr-[150px] font-header  h-[100px]">
         <div className="text-logo_color ">
           <a href="/">
-            <h1 className="text-[20px] font-header">
-              Dhruval <span className="text-[#d1d0d0]">Golakiya</span>
+            <h1 className="text-[20px] font-header relative">
+              Dhruval
+              <span className="text-[#d1d0d0] absolute ">Golakiya</span>
             </h1>
           </a>
         </div>
         <div>
-          <div className="mr-[350px] flex text-logo_color">
+          <div className="mr-[200px] flex text-logo_color">
             <ul className="flex gap-[30px]  justify-center">
-              <Link href="/">
-                <li className="hover:text-[30px]">Home</li>
-              </Link>
               <Link
-                href="/about"
-                className={path == "/about" ? "text-[red]" : ""}
+                href="/"
+                className={path == "/" ? "text-[#85C1E9] text-[30px]" : ""}
+              >
+                <li className={`hover:text-[30px]`}>Home</li>
+              </Link>
+              <a
+                href={"#about-page"}
+                className={path == "/about" ? "text-[#85C1E9] text-[30px]" : ""}
               >
                 <li className="hover:text-[30px]">About</li>
-              </Link>
-              <Link href={"/work"}>
+              </a>
+              <Link
+                href={"/work"}
+                className={path == "/work" ? "text-[#85C1E9] text-[30px]" : ""}
+              >
                 <li className="hover:text-[30px]">Work</li>
               </Link>
-              <Link href={"/expertise"}>
+              <Link
+                href={"/expertise"}
+                className={
+                  path == "/expertise" ? "text-[#85C1E9] text-[30px]" : ""
+                }
+              >
                 <li className="hover:text-[30px]">Expertise</li>
               </Link>
             </ul>
