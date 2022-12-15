@@ -11,33 +11,28 @@ import {
 
 export default function ContentBody() {
   return (
-    <>
-      <m.div
-        animate={{ x: "0%", opacity: 1 }}
-        initial={{ x: "100%", opacity: 0 }}
-        transition={{ duration: 2, ease: "easeOut" }}
-        exit={{ opacity: 1 }}
-        className="flex justify-between  mt-[100px] mr-[50px] font-name"
-      >
-        <div className="relative left-[300px] type-effect leading-[90px]">
-          <Typewriter
-            options={{
-              loop: true,
-              cursor: "|",
-              delay: 50,
-              deleteSpeed: 50,
-            }}
-            onInit={(typewriter) => {
-              typewriter
-                .typeString(
-                  "<a>Hello, World. <br />  I'm <span style='color:#85C1E9'> Dhruval Golakiya. </span> <br /> Full Stack Developer.</a>"
-                )
-                .pauseFor(200)
-                .start();
-            }}
-          />
-        </div>
-      </m.div>
-    </>
+    <div
+      id="home"
+      className="flex justify-between  mt-[100px] mr-[50px] font-name w-[90vw]"
+    >
+      <div className="relative left-[300px] type-effect leading-[90px]">
+        <Typewriter
+          options={{
+            loop: true,
+            cursor: "|",
+            delay: 50,
+            deleteSpeed: 50,
+          }}
+          onInit={(typewriter) => {
+            typewriter
+              .typeString(
+                "<a>Hello, World. <br />  I'm <span style='color:#85C1E9'> Dhruval Golakiya. </span> <br /> Full Stack Developer.</a>"
+              )
+              .pauseFor(200)
+              .start();
+          }}
+        />
+      </div>
+    </div>
   );
 }

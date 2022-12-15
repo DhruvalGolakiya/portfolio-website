@@ -3,16 +3,13 @@ import { motion as m } from "framer-motion";
 
 export default function WorkPage() {
   return (
-    <m.div
-      animate={{ x: "0%", opacity: 1 }}
-      initial={{ x: "100%", opacity: 0 }}
-      transition={{ ease: "easeOut" }}
-      exit={{ opacity: 1 }}
-      className="flex justify-between  mt-[100px] mr-[50px] font-name text-[70px] text-[white]"
+    <div
+      id="work"
+      className="flex justify-between  mt-[100px]  font-name text-[70px] text-[white] w-[100vw] "
     >
       <div className=" items-center  justify-center flex w-[100%]  type-effect ">
         <h1>Work</h1>
       </div>
-    </m.div>
+    </div>
   );
 }

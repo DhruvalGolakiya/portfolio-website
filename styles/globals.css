@@ -8,15 +8,19 @@
 /* * {
   cursor: none;
 } */
+
+html::-webkit-scrollbar {
+  display: none;
+}
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  width: 200vw;
+  width: auto;
   padding: 0;
   margin: 0;
-  height: 100vh;
+  height: fit-content;
   background-color: var(--backgroud-color);
 }
 

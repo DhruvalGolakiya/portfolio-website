@@ -8,7 +8,7 @@ import {
 
 export default function Socials() {
   return (
-    <div className=" absolute bottom-20 mt-[100px] right-[40px]">
+    <div className="fixed  bottom-20 mt-[100px] right-[40px]">
       <ul className="flex-col grid gap-[40px]">
         <a className="vl relative left-[8px] top-5"></a>
         <a href="#" className="">
