@@ -13,7 +13,7 @@ export default function ContentBody() {
   return (
     <div
       id="home"
-      className="flex justify-between  mt-[100px] mr-[50px] font-name w-[90vw]"
+      className="flex justify-between  mt-[100px] mr-[50px] font-name w-[100vw]"
     >
       <div className="relative left-[300px] type-effect leading-[90px]">
         <Typewriter

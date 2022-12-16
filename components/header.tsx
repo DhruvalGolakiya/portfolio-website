@@ -4,11 +4,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { AppProps } from "next/app";
 import useLocation from "react";
+import { Divider } from "@mui/material";
 
 export default function Header() {
-  const router = useRouter();
-  const path = router.pathname;
-
   return (
     <div className="flex fixed justify-between  items-center  font-header w-[100vw] px-[100px] h-[100px]">
       <div className="text-logo_color ">
@@ -20,31 +18,31 @@ export default function Header() {
         </a>
       </div>
       <div>
-        <div className="mr-[200px] flex text-logo_color">
+        <div className="mr-[00px] flex text-logo_color">
           <ul className="flex gap-[30px]  justify-center">
             <a
               href="#home"
-              className={path == "/" ? "text-[#85C1E9] text-[30px]" : ""}
+              // className={path == "/" ? "text-[#85C1E9] text-[30px]" : ""}
             >
               <li className={`hover:text-[30px]`}>Home</li>
             </a>
             <a
               href={"#about"}
-              className={path == "/about" ? "text-[#85C1E9] text-[30px]" : ""}
+              // className={path == "/about" ? "text-[#85C1E9] text-[30px]" : ""}
             >
               <li className="hover:text-[30px]">About</li>
             </a>
             <a
               href={"#work"}
-              className={path == "/work" ? "text-[#85C1E9] text-[30px]" : ""}
+              // className={path == "/work" ? "text-[#85C1E9] text-[30px]" : ""}
             >
               <li className="hover:text-[30px]">Work</li>
             </a>
             <a
               href={"#expertise"}
-              className={
-                path == "/expertise" ? "text-[#85C1E9] text-[30px]" : ""
-              }
+              // className={
+              //   path == "/expertise" ? "text-[#85C1E9] text-[30px]" : ""
+              // }
             >
               <li className="hover:text-[30px]">Expertise</li>
             </a>
@@ -54,7 +52,7 @@ export default function Header() {
       <div className="text-[white]">
         <div>
           <ul>
-            <a>
+            <a href="#contact">
               <li>Contact</li>
             </a>
           </ul>

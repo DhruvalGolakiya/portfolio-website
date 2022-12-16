@@ -10,7 +10,7 @@ import AboutPage from "./about";
 
 export default function Home() {
   return (
-    <div>
+    <div className=" bg-[rgba(2, 2, 2)]">
       <Header />
       <Socials />
       <Body />
