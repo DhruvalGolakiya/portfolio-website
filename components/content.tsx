@@ -15,7 +15,7 @@ export default function ContentBody() {
       id="home"
       className="flex justify-between  mt-[100px] mr-[50px] font-name w-[100vw]"
     >
-      <div className="relative left-[300px] type-effect leading-[90px]">
+      <div className="relative left-[300px] type-effect leading-[90px] -z-10">
         <Typewriter
           options={{
             loop: true,

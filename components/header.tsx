@@ -4,9 +4,18 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { AppProps } from "next/app";
 import useLocation from "react";
-import { Divider } from "@mui/material";
+import Backdrop from "@mui/material/Backdrop";
+import { BackdropRoot, CircularProgress, Divider } from "@mui/material";
+import ContactUs from "./contact_us";
 
 export default function Header() {
+  const [open, setOpen] = React.useState(false);
+  const handleClose = () => {
+    setOpen(false);
+  };
+  const handleToggle = () => {
+    setOpen(!open);
+  };
   return (
     <div className="flex fixed justify-between  items-center  font-header w-[100vw] px-[100px] h-[100px]">
       <div className="text-logo_color ">
@@ -52,9 +61,20 @@ export default function Header() {
       <div className="text-[white]">
         <div>
           <ul>
-            <a href="#contact">
+            <a href="#contact" onClick={handleToggle}>
               <li>Contact</li>
             </a>
+            <Backdrop
+              sx={{
+                backgroundColor: "rgb(27, 26, 26,0.9)",
+                color: "white",
+                zIndex: (theme) => theme.zIndex.drawer + 10,
+              }}
+              open={open}
+              onClick={handleClose}
+            >
+              <ContactUs />
+            </Backdrop>
           </ul>
         </div>
       </div>
