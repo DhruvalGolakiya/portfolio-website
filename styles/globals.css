@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --backgroud-color: #040401;
+  --backgroud-color: rgb(5, 5, 5);
 }
 /* * {
   cursor: none;
@@ -18,10 +18,8 @@ html {
 
 body {
   background-color: var(--backgroud-color);
-  width: auto;
   padding: 0;
   margin: 0;
-  height: fit-content;
 }
 
 .font-name {

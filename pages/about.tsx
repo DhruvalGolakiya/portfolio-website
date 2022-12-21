@@ -1,9 +1,6 @@
 import React from "react";
-import { motion as m } from "framer-motion";
-import Link from "next/link";
 import ServiceCard from "../components/services/service";
 import { Services } from "../database/services/services";
-import { Divider } from "@mui/material";
 
 export default function AboutPage() {
   return (
@@ -29,10 +26,7 @@ export default function AboutPage() {
           </div>
         </div>
         <div className="-z-10 w-[1000px] h-[500px] ml-[100px] flex justify-center items-center">
-          <p className=" text-[30px] ">
-            Hello there , I'm Dhruval Golakiya from India. Full Stack
-            Web-Developer
-          </p>
+          <p className=" text-[30px] ">Personal Info</p>
         </div>
       </div>
     </div>
