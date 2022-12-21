@@ -17,7 +17,7 @@ export default function Header() {
     setOpen(!open);
   };
   return (
-    <div className="flex fixed justify-between  items-center  font-header w-[100vw] px-[100px] h-[100px]">
+    <div className="flex  justify-between  items-center mt-[50px] font-header w-[100vw] px-[100px]">
       <div className="text-logo_color ">
         <a href="/">
           <h1 className="text-[20px] font-header relative">
@@ -30,25 +30,25 @@ export default function Header() {
         <div className="mr-[00px] flex text-logo_color">
           <ul className="flex gap-[30px]  justify-center">
             <a
-              href="#home"
+              href="/"
               // className={path == "/" ? "text-[#85C1E9] text-[30px]" : ""}
             >
               <li className={`hover:text-[30px]`}>Home</li>
             </a>
             <a
-              href={"#about"}
+              href={"/about"}
               // className={path == "/about" ? "text-[#85C1E9] text-[30px]" : ""}
             >
               <li className="hover:text-[30px]">About</li>
             </a>
             <a
-              href={"#work"}
+              href={"/work"}
               // className={path == "/work" ? "text-[#85C1E9] text-[30px]" : ""}
             >
               <li className="hover:text-[30px]">Work</li>
             </a>
             <a
-              href={"#expertise"}
+              href={"/expertise"}
               // className={
               //   path == "/expertise" ? "text-[#85C1E9] text-[30px]" : ""
               // }

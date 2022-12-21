@@ -8,6 +8,8 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   return (
     <div>
       <AnimatePresence initial={false} mode={"wait"}>
+        <Header />
+        <Socials />
         <Component key={router.pathname} {...pageProps} />
       </AnimatePresence>
     </div>

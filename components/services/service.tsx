@@ -4,7 +4,7 @@ import { Services } from "../../database/services/services";
 export default function ServiceCard({ image, name, description }: any) {
   return (
     <div className="flex-col">
-      <div className="justify-center h-auto  items-center pt-[10px] leading-[20px] px-[20px] rounded-[10px] relative">
+      <div className="justify-center h-auto  items-center pt-[10px] leading-[20px] px-[20px] rounded-[10px]">
         <>
           <div className="flex justify-center items-center mx-auto ">
             <img

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --backgroud-color: rgb(27, 26, 26);
+  --backgroud-color: #040401;
 }
 /* * {
   cursor: none;
@@ -29,7 +29,6 @@ body {
 }
 
 div.type-effect {
-
   font-size: 70px;
   color: white;
 }
