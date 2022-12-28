@@ -6,7 +6,7 @@ import Socials from "../components/socials";
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   return (
-    <div>
+    <div className="">
       <AnimatePresence initial={false} mode={"wait"}>
         <Header />
         <Socials />

@@ -17,7 +17,7 @@ export default function Header() {
     setOpen(!open);
   };
   return (
-    <div className="flex  justify-between  items-center mt-[50px] font-header w-[100vw] px-[100px] text-[white]">
+    <div className="flex fixed  top-0 h-[15vh] bg-black justify-between  items-center  z-50 font-header w-[100vw] px-[100px] text-[white]">
       <div className="text-logo_color ">
         <a href="/">
           <h1 className="text-[20px] font-header relative">
@@ -35,10 +35,10 @@ export default function Header() {
             >
               <li className={`hover:text-[30px]`}>Home</li>
             </a>
-            <a href={"/about"}>
+            <a href="#about">
               <li className="hover:text-[30px]">About</li>
             </a>
-            <a href={"/work"}>
+            <a href="#work">
               <li className="hover:text-[30px]">Work</li>
             </a>
             <a href={"/expertise"}>
