@@ -1,12 +1,5 @@
 import React from "react";
-import { useRouter } from "next/router";
-import { motion } from "framer-motion";
-import Link from "next/link";
-import { AppProps } from "next/app";
-import useLocation from "react";
-import Backdrop from "@mui/material/Backdrop";
-import { BackdropRoot, CircularProgress, Divider } from "@mui/material";
-import ContactUs from "./contact_us";
+import { FiMail } from "react-icons/fi";
 
 export default function Header() {
   const [open, setOpen] = React.useState(false);
@@ -17,55 +10,36 @@ export default function Header() {
     setOpen(!open);
   };
   return (
-    <div className="flex fixed  top-0 h-[15vh] bg-black justify-between  items-center  z-50 font-header w-[100vw] px-[100px] text-[white]">
-      <div className="text-logo_color ">
-        <a href="/">
-          <h1 className="text-[20px] font-header relative">
-            Dhruval
-            <span className="text-[#d1d0d0] absolute ">Golakiya</span>
-          </h1>
-        </a>
+    <div className=" w-[100vw] h-[10vh] bg-[black] flex items-center justify-between px-[100px]  text-[#d4d3d3]">
+      <div className="flex gap-[15px]">
+        <div className=" relative border-[2px] border-[#ffffff] rounded-[50%] w-[50px] h-[50px] ">
+          <FiMail
+            color="white"
+            className="w-[20px] h-[20px] m-auto left-0 right-0 top-[50%] -translate-y-[50%] absolute  text-center justify-center flex items-center"
+          />
+        </div>
+        <div className="hidden md:flex items-center">
+          <h1>dhruval@golakiya.com</h1>
+        </div>
       </div>
       <div>
-        <div className="mr-[00px] flex text-logo_color">
-          <ul className="flex gap-[30px]  justify-center">
-            <a
-              href="/"
-              // className={path == "/" ? "text-[#85C1E9] text-[30px]" : ""}
-            >
-              <li className={`hover:text-[30px]`}>Home</li>
-            </a>
-            <a href="#about">
-              <li className="hover:text-[30px]">About</li>
-            </a>
-            <a href="#work">
-              <li className="hover:text-[30px]">Work</li>
-            </a>
-            <a href={"/expertise"}>
-              <li className="hover:text-[30px]">Expertise</li>
-            </a>
-          </ul>
-        </div>
+        <h1 className="text-[50px]">D<span className="text-[30px]">G</span></h1>
       </div>
-      <div className="text-[white]">
-        <div>
-          <ul>
-            <a href="#contact" onClick={handleToggle}>
-              <li>Contact</li>
-            </a>
-            <Backdrop
-              sx={{
-                backgroundColor: "rgb(27, 26, 26,0.9)",
-                color: "white",
-                zIndex: (theme) => theme.zIndex.drawer + 10,
-              }}
-              open={open}
-              onClick={handleClose}
-            >
-              <ContactUs />
-            </Backdrop>
-          </ul>
-        </div>
+      <div>
+        <ul className="flex gap-[20px]">
+          <div>
+            <li>Portfolio</li>
+          </div>
+          <div>
+            <li>Expertise</li>
+          </div>
+          <div>
+            <li>Services</li>
+          </div>
+          <div>
+            <li>Contact</li>
+          </div>
+        </ul>
       </div>
     </div>
   );

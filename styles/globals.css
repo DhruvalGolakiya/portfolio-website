@@ -3,10 +3,29 @@
 @tailwind utilities;
 
 :root {
-  --backgroud-color: rgb(5, 5, 5);
+  --backgroud-color: rgb(255, 255, 255);
 }
-/* * {
-  cursor: none;
+
+.container{
+  max-width: 1240px;
+  @apply mx-auto;
+  @apply px-4;
+}
+body {
+  background-color: #0b0b0b;
+}
+/* 
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.header {
+  animation: 3s ease-in-out 0s 1 slideInFromLeft;
 } */
 
 html::-webkit-scrollbar {
@@ -16,37 +35,14 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  background-color: var(--backgroud-color);
-  padding: 0;
-  margin: 0;
-}
-
 .font-name {
-  font-family: monospace;
+  font-family: Gilda Display;
 }
 
-div.type-effect {
-  font-size: 70px;
-  color: white;
+
+.main-font {
+  font-weight: bolder;
+  font-size: 8rem;
+  font-family: Gilda Display;
 }
 
-.font-header {
-  font-size: 20px;
-  font-family: monospace;
-}
-
-.vl {
-  border-left: 2px solid rgb(255, 255, 255);
-  height: 100px;
-}
-
-.svg_image {
-  filter: brightness(0.4) contrast(200%) opacity(100%) invert(100%);
-}
-
-.custom_shape {
-  width: 200px;
-  height: 200px;
-  background: red;
-}
