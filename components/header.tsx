@@ -23,7 +23,8 @@ export default function Header() {
         </div>
       </div>
       <div>
-        <h1 className="text-[50px]">D<span className="text-[30px]">G</span></h1>
+        <img src="/main-logo.png" height={90} width={0} />
+        {/* <h1 className="text-[50px]">D<span className="text-[30px]">G</span></h1> */}
       </div>
       <div>
         <ul className="flex gap-[20px]">

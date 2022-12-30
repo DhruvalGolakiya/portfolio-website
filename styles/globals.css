@@ -6,7 +6,7 @@
   --backgroud-color: rgb(255, 255, 255);
 }
 
-.container{
+.container {
   max-width: 1240px;
   @apply mx-auto;
   @apply px-4;
@@ -39,10 +39,12 @@ html {
   font-family: Gilda Display;
 }
 
+.font-Abril{
+  font-family: Abril Fatface;
+}
 
 .main-font {
   font-weight: bolder;
   font-size: 8rem;
   font-family: Gilda Display;
 }
-
