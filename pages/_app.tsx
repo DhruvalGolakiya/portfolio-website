@@ -14,6 +14,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
           href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap"
           rel="stylesheet"
         />
+        <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet" />
       </Head>
 

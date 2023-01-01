@@ -39,12 +39,24 @@ html {
   font-family: Gilda Display;
 }
 
-.font-Abril{
-  font-family: Abril Fatface;
+.font-Acme {
+  font-family: Acme;
 }
 
 .main-font {
   font-weight: bolder;
   font-size: 8rem;
   font-family: Gilda Display;
+}
+
+.change-pfp{
+  background-image: url("/pfp3.png");
+  width: 200;
+  height: 200;
+}
+
+
+.main-pfp{
+  background-image: url("/pfp.png");
+  border-radius: 100%;
 }

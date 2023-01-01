@@ -4,7 +4,7 @@ import HomePage from "./home-page";
 
 export default function Home() {
   return (
-    <div className="font-name">
+    <div className="font-Acme">
       <Header />
       <HomePage />
     </div>

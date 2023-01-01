@@ -22,9 +22,8 @@ export default function Header() {
           <h1>dhruval@golakiya.com</h1>
         </div>
       </div>
-      <div>
-        <img src="/main-logo.png" height={90} width={0} />
-        {/* <h1 className="text-[50px]">D<span className="text-[30px]">G</span></h1> */}
+      <div className="ml-[70px]">
+        <img src="/main-logo.png" height={90} width={90} />
       </div>
       <div>
         <ul className="flex gap-[20px]">
