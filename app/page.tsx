@@ -31,7 +31,7 @@ export default function Home() {
           <div className="col-span-6 py-6 px-4 ojuju">
             <h1 className="text-[44px] anta-regular">Hello,Dhruval Here</h1>
             <h3 className="mt-2  ojuju tracking-tight leading-[22px]">
-              I’m automation specialist who can help you create efficient and
+              I&apos;m automation specialist who can help you create efficient and
               innovative solutions for your business needs. Whether you want to
               build a website, a web app, or an automation workflow.
             </h3>
