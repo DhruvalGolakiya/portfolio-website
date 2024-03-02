@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "AntaRegular";
+  src: url("./fonts/Anta-Regular.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "OjujuRegular";
+  src: url("./fonts/MPLUS1Code-Regular.ttf");
+}
+
+.anta-regular {
+  font-family: "AntaRegular";
+}
+
+.ojuju {
+  font-family: "OjujuRegular";
+}
+
+.test {
+  font-family: "Test";
+}
+
+li::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  background: rgb(255, 254, 254);
+  transition: width 0.2s;
+}
+
+li:hover::after {
+  width: 100%;
+}
+
+button {
+  background-color: #373622;
+  transition: background-color 0.5s;
+  color: #dad8cc;
+  border: 1px solid black;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+
+}
