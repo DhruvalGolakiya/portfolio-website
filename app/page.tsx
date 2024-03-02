@@ -41,7 +41,7 @@ export default function Home() {
               }}
               className=" items-center gap-x-3  text-[16px] py-2 px-4 rounded-[12px] mt-10"
             >
-              Let's talk!
+              Let&apos;s talk!
             </button>
 
             <div className="relative">
