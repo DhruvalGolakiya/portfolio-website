@@ -8,6 +8,13 @@
   font-weight: normal;
 }
 
+body {
+  /* background-image: url("/desktop-wallpaper-tech-white-tec.jpeg"); */
+  /* height: 100vh;
+  object-fit: cover;
+  background-size: cover; */
+}
+
 @font-face {
   font-family: "OjujuRegular";
   src: url("./fonts/MPLUS1Code-Regular.ttf");
@@ -64,22 +71,22 @@ button:hover {
 .blink {
   animation: blink 1.5s linear infinite;
 }
-@keyframes blink { 
-  0% { 
-      opacity: 0; 
-  } 
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
 
-  50% { 
-      opacity: 0.8; 
-  } 
+  50% {
+    opacity: 0.8;
+  }
 
-  100% { 
-      opacity: 0; 
-  } 
-} 
+  100% {
+    opacity: 0;
+  }
+}
 ::-webkit-scrollbar {
   width: 10px;
-  display:  none;
+  display: none;
 }
 
 ::-webkit-scrollbar-track {

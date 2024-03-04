@@ -24,12 +24,13 @@ export default function Home() {
     if (handleScroll) {
       document.body.style.overflow = "hidden";
     }
-    if(!handleScroll){
+    if (!handleScroll) {
       document.body.style.overflow = "auto";
     }
   }, [handleScroll]);
   return (
-    <main id="root" className={`${handleScroll ? "overflow-hidden" : ""}`}>
+    <></>
+    /*    <main id="root" className={`${handleScroll ? "overflow-hidden" : ""}`}>
       <motion.div className="progress-bar"></motion.div>
       <div className="w-full h-[100vh] relative">
         <img
@@ -68,7 +69,7 @@ export default function Home() {
                 onModalClose={() => {
                   setOpen(false);
                   setHandleScroll(false);
-                  console.log('dsada')
+                  console.log("dsada");
                 }}
                 url="https://calendly.com/dhruval-jga/45min?month=2024-03&background_color=373622&text_color=dad8cc&primary_color=373622"
                 rootElement={rootElement}
@@ -77,6 +78,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className="h-[800px] bg-white w-[70%] mx-auto absolute left-0 top-0 bottom-0 right-0 self-center flex items-center justify-center">
+        </div>
       <div className="absolute top-0 items-center grid grid-cols-10 gap-x-4 col-span-10  text-white ojuju pt-8 px-10 w-full  z-[99999]">
         <a
           href="/"
@@ -97,18 +100,14 @@ export default function Home() {
             </a>
           </ul>
         </div>
-        {/*       <ul className="text-[white]">
-          <li>
-            Home
-          </li>
-        </ul> */}
+    
       </div>
       <div className="absolute bottom-0 right-10  flex mb-10  justify-center z-[9999]">
         <div className="border-[2px] blink arrow-hover rounded-full border-black h-[50px] w-[50px] flex items-center justify-center">
           <CIcon icon={cilArrowBottom} className="h-[30px]" />
         </div>
       </div>
-      {/* <div className="h-[100vh]"></div> */}
-    </main>
+      {<div className="h-[100vh]"></div>}
+    </main> */
   );
 }
