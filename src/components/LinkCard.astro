@@ -1,0 +1,155 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  url: string;
+  spanColumns?: 1 | 2 | 3;
+  aspectRatio?: "1:1" | "16:9" | "1.91:1";
+  delay?: number;
+}
+
+const { 
+  title, 
+  description, 
+  image, 
+  url, 
+  spanColumns = 1, 
+  aspectRatio = "1.91:1",
+  delay = 0
+} = Astro.props;
+
+const spanClass = `span-${spanColumns}`;
+let paddingTop = "52.36%"; // 1.91:1 ratio default
+
+if (aspectRatio === "1:1") paddingTop = "100%";
+if (aspectRatio === "16:9") paddingTop = "56.25%";
+
+const animationDelay = `${delay * 0.1}s`;
+---
+
+<a 
+  href={url}
+  class={`card ${spanClass}`}
+  target="_blank"
+  rel="noopener noreferrer"
+  style={`--animation-delay: ${animationDelay};`}
+  data-umami-event="link_click"
+  data-umami-event-name={title}
+>
+  <div class="card-content glass">
+    <div class="card-info">
+      <h3>{title}</h3>
+      {description && <p>{description}</p>}
+    </div>
+    <div class="card-footer">
+      <div class="click-indicator">
+        <span class="link-text">Visit</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14"></path>
+          <path d="m12 5 7 7-7 7"></path>
+        </svg>
+      </div>
+    </div>
+  </div>
+</a>
+
+<style>
+  .card {
+    display: block;
+    text-decoration: none;
+    color: var(--text);
+    animation: cardFadeIn 0.6s ease-out forwards;
+    animation-delay: var(--animation-delay);
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  
+  .card:focus {
+    outline: none;
+  }
+  
+  .card:focus .card-content {
+    box-shadow: 0 0 0 3px var(--primary-500);
+  }
+  
+  .card-content {
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    transition: all var(--transition-bounce);
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card:hover .card-content {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: var(--shadow-lg);
+  }
+  
+
+  
+  .card-info {
+    padding: var(--spacing-sm);
+    flex-grow: 1;
+  }
+  
+  .card-info h3 {
+    margin-bottom: var(--spacing-xs);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-500);
+  }
+  
+  .click-indicator {
+    padding: var(--spacing-sm);
+    padding-top: 0;
+    color: var(--text-secondary);
+    opacity: 0.7;
+    transition: transform var(--transition-normal), opacity var(--transition-normal);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    align-self: flex-end;
+    justify-content: flex-end;
+    margin-top: auto;
+  }
+  
+  .link-text {
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  .card:hover .click-indicator {
+    transform: translateX(3px);
+    opacity: 1;
+  }
+  
+  .card-footer {
+    width: 100%;
+    padding: var(--spacing-sm);
+    padding-top: 0;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+  }
+  
+  .card-info p {
+    color: var(--text-secondary);
+    font-size: 0.925rem;
+    line-height: 1.4;
+  }
+  
+  @keyframes cardFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

@@ -1,0 +1,160 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Profile from '../components/Profile.astro';
+import LinkCard from '../components/LinkCard.astro';
+import ImageCard from '../components/ImageCard.astro';
+import Timeline from '../components/Timeline.astro';
+
+// Content data
+const profile = {
+  name: "Dhruval Golakiya",
+  bio: "Building - adcreators.ai\n5+ years building software · Vibe-coding with AI tools",
+  profileImage: "/dhruval.jpg",
+  twitterUrl: "https://x.com/DhruvalGolakiya"
+};
+
+const mainCards = [
+  {
+    title: "Ryplix.com",
+    description: "Develop your next project from start to end",
+    url: "https://creme-digital.link/Qur6QsT"
+  }
+];
+
+const experienceItems = [
+  {
+    title: "Developer at Creme Digital (Build your MVP in 2 weeks)",
+    period: "2025 - Present",
+    description: "Building MVPs for startups and enterprises. Specializing in web applications and AI integration.",
+    url: "https://creme-digital.link/Qur6QsT"
+  },
+  {
+    title: "Freelance Developer",
+    period: "2020 - 2025",
+    description: "5+ years of freelance experience working with various clients on web and mobile applications.",
+    url: ""
+  }
+];
+
+const productsSection = [
+  {
+    title: "AdCreators.ai",
+    description: "AI-powered ad creation platform",
+    image: "/p_1.png",
+    url: "http://adcreators.ai"
+  }
+];
+
+const additionalTools = [
+  {
+    title: "Typography Guide",
+    description: "Learn the principles of good web typography.",
+    url: "/typography"
+  },
+  {
+    title: "CSS Animations",
+    description: "Ready-to-use animation snippets.",
+    url: "/animations"
+  },
+  {
+    title: "Accessibility Checklist",
+    description: "Ensure your projects are accessible to everyone.",
+    url: "/accessibility"
+  }
+];
+---
+
+<Layout
+  title="Dhruval Golakiya - Software Developer"
+  description="Building adcreators.ai | 5+ years building software · Vibe-coding with AI tools"
+>
+  <Profile 
+    name={profile.name}
+    bio={profile.bio}
+    profileImage={profile.profileImage}
+    twitterUrl={profile.twitterUrl}
+  />
+  
+  <main>
+    <!-- Main Cards Section -->
+    <div class="section">
+      <div class="grid-container main-cards-grid">
+        {mainCards.map((card, index) => (
+          <LinkCard 
+            title={card.title}
+            description={card.description}
+            url={card.url}
+            delay={index}
+          />
+        ))}
+      </div>
+    </div>
+    
+    <!-- Experience Section -->
+    <div class="section">
+      <h2 class="section-title">Experience</h2>
+      <Timeline items={experienceItems} />
+    </div>
+    
+    <!-- Products Section -->
+    <div class="section">
+      <h2 class="section-title">Products</h2>
+      <div class="grid-container products-grid">
+        {productsSection.map((product, index) => (
+          <ImageCard 
+            title={product.title}
+            description={product.description}
+            image={product.image}
+            url={product.url}
+            delay={index + 1}
+          />
+        ))}
+      </div>
+    </div>
+    
+
+  </main>
+  
+</Layout>
+
+<style>
+  main {
+    margin-top: var(--spacing-xl);
+  }
+  
+  .products-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .main-cards-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .resources-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  @media (min-width: 640px) {
+    .main-cards-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .products-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 960px) {
+    .products-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  footer {
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-md) 0;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+  }
+</style>
