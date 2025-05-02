@@ -63,7 +63,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
           return localStorage.getItem('theme');
         }
-        return 'light';
+        return 'dark';
       };
       
       const theme = getThemePreference();
